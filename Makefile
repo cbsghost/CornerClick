@@ -1,5 +1,5 @@
-VERS=0.9
-CP=/Developer/Tools/CpMac
+VERS=0.9.1
+CP=cp
 DMGSRC=dmg-source
 EXPORT=export
 CCEXP=${EXPORT}/CornerClick-${VERS}
@@ -7,8 +7,8 @@ LOCALIZED_XIBS=Spanish.lproj/ClickBoxPref.xib French.lproj/ClickBoxPref.xib Germ
 
 dist: 
 	-rm -rf "${EXPORT}"
-	-mkdir -p "${EXPORT}"
-	svn export ${DMGSRC} "${CCEXP}"
+	-mkdir -p "${CCEXP}"
+	#svn export ${DMGSRC} "${CCEXP}"
 	-mkdir "${CCEXP}/Uninstall"
 	${CP} English.lproj/Uninstall.rtf "${CCEXP}/Uninstall/English.rtf"
 	${CP} English.lproj/Readme.rtf "${CCEXP}/Readme (E).rtf"
@@ -18,7 +18,7 @@ dist:
 	${CP} Spanish.lproj/Uninstall.rtf "${CCEXP}/Uninstall/Espanol.rtf"
 	${CP} German.lproj/Deinstallieren.rtf  "${CCEXP}/Uninstall/German.rtf"
 	-rm -r "${CCEXP}/CornerClick.prefPane"
-	${CP} -r "build/Deployment/CornerClick.prefPane"  "${CCEXP}/"
+	${CP} -r "DerivedData/CornerClick/Build/Products/Deployment/CornerClick.prefPane" "${CCEXP}/"
 	cd "${EXPORT}" && tar cjf "CornerClick-${VERS}.tar.bz2" "CornerClick-${VERS}"
 
 compress: 
