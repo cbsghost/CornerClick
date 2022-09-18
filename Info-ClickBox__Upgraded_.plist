@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>CornerClick</string>
 	<key>CFBundleIdentifier</key>
-	<string>us.vario.greg.CornerClick</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -15,11 +15,11 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.9</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>0.8.2.1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>NSMainNibFile</key>
 	<string>ClickBoxPref</string>
 	<key>NSPrefPaneIconFile</key>

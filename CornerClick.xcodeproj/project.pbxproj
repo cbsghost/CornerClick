@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 44;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -145,7 +145,7 @@
 		37C3CB3B04CDAD30000001CF /* GrayView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GrayView.m; sourceTree = "<group>"; };
 		37C3CB3C04CDAD30000001CF /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		37C3CB3D04CDAD30000001CF /* CornerClickBG_Prefix.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = CornerClickBG_Prefix.h; path = clickBG/CornerClickBG_Prefix.h; sourceTree = "<group>"; };
-		37C3CB5A04CDADFF000001CF /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = InfoPlist.strings; sourceTree = "<group>"; };
+		37C3CB5A04CDADFF000001CF /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = InfoPlist.strings; sourceTree = "<group>"; };
 		37C3CB5C04CDADFF000001CF /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = MainMenu.nib; sourceTree = "<group>"; };
 		37C3CBC704CE7BEA000001CF /* English */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = English; path = BookmarkPreferences.tiff; sourceTree = "<group>"; };
 		37D5BD371147B1B4004EEE8F /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ClickBoxPref.xib; sourceTree = "<group>"; };
@@ -411,10 +411,15 @@
 /* Begin PBXProject section */
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1400;
+			};
 			buildConfigurationList = 37B983B709428A4400C3AD30 /* Build configuration list for PBXProject "CornerClick" */;
 			compatibilityVersion = "Xcode 3.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
+				en,
 				English,
 				Japanese,
 				French,
@@ -639,9 +644,13 @@
 		37B983AC09428A4400C3AD30 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 0.9;
 				DEPLOYMENT_LOCATION = NO;
+				DEVELOPMENT_TEAM = G8443M8L92;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -655,7 +664,9 @@
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = me.cbsghost.andy.CornerClick.agent;
 				PRODUCT_NAME = CornerClickBG;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
 				VERSIONING_SYSTEM = "apple-generic";
 				WARNING_CFLAGS = "-Wmost";
@@ -667,12 +678,14 @@
 		37B983AD09428A4400C3AD30 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 0.9;
 				DEPLOYMENT_LOCATION = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = G8443M8L92;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -683,7 +696,9 @@
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = me.cbsghost.andy.CornerClick.agent;
 				PRODUCT_NAME = CornerClickBG;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
 				VERSIONING_SYSTEM = "apple-generic";
 				WARNING_CFLAGS = "-Wmost";
@@ -695,7 +710,11 @@
 		37B983AE09428A4400C3AD30 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0.9;
+				DEVELOPMENT_TEAM = G8443M8L92;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = clickBG/CornerClickBG_Prefix.h;
 				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
@@ -704,7 +723,9 @@
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = me.cbsghost.andy.CornerClick.agent;
 				PRODUCT_NAME = CornerClickBG;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SECTORDER_FLAGS = "";
 				VERSIONING_SYSTEM = "apple-generic";
 				WARNING_CFLAGS = "-Wmost";
@@ -715,10 +736,15 @@
 		37B983B009428A4400C3AD30 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPYING_PRESERVES_HFS_DATA = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 0.9;
+				CURRENT_PROJECT_VERSION = 0.9.1;
 				DEPLOYMENT_LOCATION = NO;
+				DEVELOPMENT_TEAM = G8443M8L92;
 				DYLIB_CURRENT_VERSION = 0.9;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -735,13 +761,18 @@
 				INFOPLIST_FILE = "Info-ClickBox__Upgraded_.plist";
 				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
 				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MARKETING_VERSION = 0.9.1;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-bundle",
 					"-twolevel_namespace",
 				);
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = me.cbsghost.andy.CornerClick;
 				PRODUCT_NAME = CornerClick;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx12.3;
 				SECTORDER_FLAGS = "";
 				VERSIONING_SYSTEM = "apple-generic";
 				WARNING_CFLAGS = "-Wmost";
@@ -753,13 +784,16 @@
 		37B983B109428A4400C3AD30 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPYING_PRESERVES_HFS_DATA = YES;
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 0.9;
+				CURRENT_PROJECT_VERSION = 0.9.1;
 				DEPLOYMENT_LOCATION = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = G8443M8L92;
 				DYLIB_CURRENT_VERSION = 0.9;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -774,13 +808,18 @@
 				INFOPLIST_FILE = "Info-ClickBox__Upgraded_.plist";
 				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
 				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MARKETING_VERSION = 0.9.1;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-bundle",
 					"-twolevel_namespace",
 				);
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = me.cbsghost.andy.CornerClick;
 				PRODUCT_NAME = CornerClick;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx12.3;
 				SECTORDER_FLAGS = "";
 				VERSIONING_SYSTEM = "apple-generic";
 				WARNING_CFLAGS = "-Wmost";
@@ -792,9 +831,14 @@
 		37B983B209428A4400C3AD30 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPYING_PRESERVES_HFS_DATA = YES;
-				CURRENT_PROJECT_VERSION = 0.9;
+				CURRENT_PROJECT_VERSION = 0.9.1;
 				DEPLOYMENT_LOCATION = NO;
+				DEVELOPMENT_TEAM = G8443M8L92;
 				DYLIB_CURRENT_VERSION = 0.9;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_ENABLE_OBJC_GC = supported;
@@ -807,13 +851,18 @@
 				INFOPLIST_FILE = "Info-ClickBox__Upgraded_.plist";
 				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
 				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MARKETING_VERSION = 0.9.1;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"-bundle",
 					"-twolevel_namespace",
 				);
 				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = me.cbsghost.andy.CornerClick;
 				PRODUCT_NAME = CornerClick;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx12.3;
 				SECTORDER_FLAGS = "";
 				VERSIONING_SYSTEM = "apple-generic";
 				WARNING_CFLAGS = "-Wmost";
@@ -824,11 +873,11 @@
 		37B983B809428A4400C3AD30 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD)";
+				DEVELOPMENT_TEAM = G8443M8L92;
 				GCC_ENABLE_OBJC_GC = unsupported;
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx12.3;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Development;
@@ -836,12 +885,12 @@
 		37B983B909428A4400C3AD30 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				ARCHS = "$(ARCHS_STANDARD)";
+				DEVELOPMENT_TEAM = G8443M8L92;
 				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx12.3;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Deployment;
@@ -849,9 +898,11 @@
 		37B983BA09428A4400C3AD30 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				DEVELOPMENT_TEAM = G8443M8L92;
 				GCC_ENABLE_OBJC_GC = unsupported;
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx12.3;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Default;
