@@ -324,6 +324,7 @@ NSInteger selectedMod=-1;
         [window setHasShadow:NO];
         [window setLevel: NSPopUpMenuWindowLevel];
         [window setAlphaValue: 0.1];
+		[window setBackgroundColor:[NSColor clearColor]];
         [window setCollectionBehavior:NSWindowCollectionBehaviorCanJoinAllSpaces];
 
 
@@ -439,6 +440,7 @@ postNotificationName: @"CornerClickPingBackNotification"
                                                      defer:YES ];
     [hoverWin setLevel:NSStatusWindowLevel];
     [hoverWin setAlphaValue:1.0];
+	[hoverWin setBackgroundColor:[NSColor clearColor]];
     [hoverWin setHasShadow: NO];
     [hoverWin setOpaque:NO];
     [hoverWin setCollectionBehavior:NSWindowCollectionBehaviorCanJoinAllSpaces];
